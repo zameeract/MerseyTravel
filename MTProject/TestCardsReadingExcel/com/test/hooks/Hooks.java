@@ -24,7 +24,7 @@ public class Hooks
 
 	public static void launchBrowser() throws Exception
 	{
-		options.addArguments("-start-maximized");
+		options.addArguments("start-maximized");
 		options.addArguments("disable-infobars");
 		System.setProperty("webdriver.chrome.driver", "chromedriver.exe");
 		driver=new ChromeDriver(options);

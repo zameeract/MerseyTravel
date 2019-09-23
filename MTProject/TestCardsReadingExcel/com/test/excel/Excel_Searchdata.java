@@ -4,9 +4,8 @@
 
 package com.test.excel;
 
-    import java.io.File;
+import java.io.File;
 import java.io.FileInputStream;
-
 import org.apache.poi.xssf.usermodel.XSSFSheet;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 
@@ -20,7 +19,7 @@ import org.apache.poi.xssf.usermodel.XSSFWorkbook;
         public static String Gender;
         public static String DateOfBirth;
         public static String AddressLine_1;
-        public static String  AddressLine_2;
+        public static String AddressLine_2;
         public static String Postcode;
         public static String Issueauthority;
         public static String Disability_status;
@@ -37,7 +36,8 @@ import org.apache.poi.xssf.usermodel.XSSFWorkbook;
             final File f=new File("TestData/searchdata.xlsx");
             final FileInputStream fi= new FileInputStream(f);
 
-            final XSSFWorkbook wb=new XSSFWorkbook(fi);
+            @SuppressWarnings("resource")
+			final XSSFWorkbook wb=new XSSFWorkbook(fi);
             final XSSFSheet sheet=wb.getSheetAt(0);
 
             for(int i=RowNumber; i<=RowNumber;  i++)

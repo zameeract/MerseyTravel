@@ -29,9 +29,10 @@ public class Excel_Read {
 
 	public static void read(final int RowNumber) throws Exception
 	{
-		final File f=new File("TestData/merseytraveltestdata-1.xlsx");
+		final File f=new File("TestData/Merseytraveltestdata.xlsx");
 		final FileInputStream fi= new FileInputStream(f);
 
+		@SuppressWarnings("resource")
 		final XSSFWorkbook wb=new XSSFWorkbook(fi);
 		final XSSFSheet sheet=wb.getSheetAt(0);
 

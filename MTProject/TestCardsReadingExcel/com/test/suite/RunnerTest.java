@@ -25,7 +25,7 @@ public class RunnerTest extends Hooks
         //launchBrowser();
 
         //login
-        //LoginIntoApplication();
+        //  LoginIntoApplication();
 	}
 
 	@Test
@@ -40,10 +40,10 @@ public class RunnerTest extends Hooks
 			Excel_Read.read(i);
 			System.out.println("Excel Data loaded successfully");
 			//launch browser
-			launchBrowser();
+			  launchBrowser();
 
 			//login
-			LoginIntoApplication();
+			  LoginIntoApplication();
 
 			//scenario
 			 driver.findElement(By.xpath("//div[@class='bottom']//a[@href='addnewcardholder'][contains(text(),'Add new customer')]")).click();
