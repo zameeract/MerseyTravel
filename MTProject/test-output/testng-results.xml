@@ -2,20 +2,20 @@
 <testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="324851" started-at="2019-09-23T10:59:43 BST" finished-at="2019-09-23T11:05:08 BST">
+  <suite name="Default suite" duration-ms="387453" started-at="2019-10-14T09:26:42 BST" finished-at="2019-10-14T09:33:09 BST">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="324851" started-at="2019-09-23T10:59:43 BST" finished-at="2019-09-23T11:05:08 BST">
+    <test name="Default test" duration-ms="387453" started-at="2019-10-14T09:26:42 BST" finished-at="2019-10-14T09:33:09 BST">
       <class name="com.test.suite.RunnerTest">
-        <test-method status="PASS" signature="launchApplication()[pri:0, instance:com.test.suite.RunnerTest@52feb982]" name="launchApplication" is-config="true" duration-ms="13261" started-at="2019-09-23T10:59:43 BST" finished-at="2019-09-23T10:59:56 BST">
+        <test-method status="PASS" signature="launchApplication()[pri:0, instance:com.test.suite.RunnerTest@52feb982]" name="launchApplication" is-config="true" duration-ms="23" started-at="2019-10-14T09:26:42 BST" finished-at="2019-10-14T09:26:42 BST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- launchApplication -->
-        <test-method status="PASS" signature="Login()[pri:0, instance:com.test.suite.RunnerTest@52feb982]" name="Login" duration-ms="311559" started-at="2019-09-23T10:59:56 BST" finished-at="2019-09-23T11:05:08 BST">
+        <test-method status="PASS" signature="Login()[pri:0, instance:com.test.suite.RunnerTest@52feb982]" name="Login" duration-ms="387390" started-at="2019-10-14T09:26:42 BST" finished-at="2019-10-14T09:33:09 BST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- Login -->
-        <test-method status="PASS" signature="CloseTest()[pri:0, instance:com.test.suite.RunnerTest@52feb982]" name="CloseTest" is-config="true" duration-ms="0" started-at="2019-09-23T11:05:08 BST" finished-at="2019-09-23T11:05:08 BST">
+        <test-method status="PASS" signature="CloseTest()[pri:0, instance:com.test.suite.RunnerTest@52feb982]" name="CloseTest" is-config="true" duration-ms="0" started-at="2019-10-14T09:33:09 BST" finished-at="2019-10-14T09:33:09 BST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- CloseTest -->

@@ -2,9 +2,7 @@ package HotlistReissue;
 
 
 import org.openqa.selenium.By;
-import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.Select;
-import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
@@ -52,17 +50,17 @@ public class HotlistReissue extends Hooks
              driver.findElement(By.xpath("//tbody[@class='clickable']")).click();
              driver.findElement(By.xpath("//a[contains(text(),'Cards')]")).click();
              
-             //Check "This card is Active"
+        /*     //Check "This card is Active"
              
              try{
 					driver.findElement(By.xpath("//div[@class='alertGreen']")).isDisplayed(); 
 					
 				}catch(Exception e)
-{
+             		{
 
 						System.out.println("Card is not Active : the erros is " + e);
-}
-                        
+             		}
+           */             
              //CardReason
              try{
                  if(Excel_HotlistReissue.CardReason.equals("N"))
@@ -77,8 +75,9 @@ public class HotlistReissue extends Hooks
                        CardReason.selectByVisibleText(Excel_HotlistReissue.CardReason);
                        System.out.println("CardReason selected");
                        Thread.sleep(1000);
-                       
-                     //Hotlist
+                 } 
+                 
+                    //Hotlist
                                               
                        try{
 
@@ -107,7 +106,7 @@ public class HotlistReissue extends Hooks
                     	   System.out.println("Issue at clicking hotlist/ re issue, the error is :" + e);
                        }
                       }
-                 }
+                 
                      catch(final Exception e)
                      {
                      System.out.println(" Test Interrupted error at: " + e);

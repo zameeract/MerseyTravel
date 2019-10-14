@@ -84,8 +84,7 @@ public class RunnerTest extends Hooks
              driver.findElement(By.xpath("//input[@id='locationAddress1']")).sendKeys(Excel_Read.AddressLine_1);
              driver.findElement(By.xpath("//input[@id='locationAddress2']")).sendKeys(Excel_Read.AddressLine_2);
              driver.findElement(By.xpath("//input[@id='locationAddrPostcode']")).sendKeys(Excel_Read.Postcode);
-            // driver.findElement(By.xpath("//input[@id='addressLookup']")).click();
-            // driver.findElement( By.xpath( "//option[@value='642861']")).click();
+            
 
              // Issueauthority
              final Select Issueauthority = new Select(driver.findElement(By.id("locationCardIssuer")));
@@ -100,6 +99,30 @@ public class RunnerTest extends Hooks
                  e.printStackTrace();
              }
              Thread.sleep( 2000 );
+             
+             // Disability status-duration
+             try{
+                 if(Excel_Read.Disability_status.equals("N"))
+                 {
+                 System.out.println("No Disabilities");
+                 Thread.sleep(1000);
+                 }
+
+                 else {
+                       final Select Disabilitystatus = new Select(driver.findElement(By.id("customerDisability")));
+               	    Disabilitystatus.selectByVisibleText(Excel_Read.Disability_status);
+                       System.out.println("Disability status selected");
+                       Thread.sleep(1000);
+
+                       final Select Disabilityduration = new Select(driver.findElement(By.name("Disability duration")));
+                       Disabilityduration.selectByVisibleText(Excel_Read.Disability_duration);
+                       System.out.println("Disability duration selected");
+                         }
+                 }
+                     catch(final Exception e)
+                     {
+                     System.out.println(" Test Interrupted error at: " + e);
+                     }
 
           // Apprenticecard - checkbox
              if(Excel_Read.Issueauthority.equalsIgnoreCase("Walrus IA"))
@@ -137,29 +160,7 @@ public class RunnerTest extends Hooks
              {
                }
 
-              // Disability status-duration
-              try{
-                  if(Excel_Read.Disability_status.equals("N"))
-                  {
-                  System.out.println("No Disabilities");
-                  Thread.sleep(1000);
-                  }
-
-                  else {
-                        final Select Disabilitystatus = new Select(driver.findElement(By.id("customerDisability")));
-                        Disabilitystatus.selectByVisibleText(Excel_Read.Disability_status);
-                        System.out.println("Disability status selected");
-                        Thread.sleep(1000);
-
-                        final Select Disabilityduration = new Select(driver.findElement(By.name("Disability duration")));
-                        Disabilityduration.selectByVisibleText(Excel_Read.Disability_duration);
-                        System.out.println("Disability duration selected");
-                          }
-                  }
-                      catch(final Exception e)
-                      {
-                      System.out.println(" Test Interrupted error at: " + e);
-                      }
+             
 
              //click Add Button
                   driver.findElement( By.xpath("//input[@id='customerAdd']")).click();
